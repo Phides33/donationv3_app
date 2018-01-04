@@ -1,5 +1,4 @@
 <%= simple_form_for @profile do |d| %>
-  <%= d.error_notification %>
   <%= d.input :amount_bracket,
         label: "Combien avez-vous donné en 2017 à des associations ?",
         collection: Profile.amount_brackets, as: :radio_buttons %>

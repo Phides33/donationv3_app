@@ -7,16 +7,17 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new
-    @profile.amount_bracket = pparams[:amount_bracket].to_i
-    raise
-    if @profile.save
-      flash.now[:notice] = "Etape 1 ok!"
+    if pparams[:amount_bracket] != ""
+      @profile.amount_bracket = pparams[:amount_bracket].to_i
+      @profile.save
       redirect_to edit_profile_path(@profile)
     else
-      raise
-      flash.now[:alert] = @profile.errors[:amount_bracket][1]
+      flash.now[:alert] = "Veuillez sélectionner une des options proposées"
       render :new
     end
+  end
+
+  def edit
   end
 
   def update
