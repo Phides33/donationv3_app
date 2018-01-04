@@ -21,9 +21,17 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    @profile.full_name = pparams[:full_name]
-    @profile.save
-    flash.now[:alert] = "Succès!"
+    if pparams[:full_name] != nil
+      @profile.full_name = pparams[:full_name]
+      @profile.save
+      flash.now[:alert] = "Succès!"
+    elsif pparams[:cause] != ""
+      @profile.cause = pparams[:cause].to_i
+      @profile.save
+      redirect_to edit_profile_path(@profile)  
+    else
+      raise
+    end
   end
 
   private
@@ -33,6 +41,6 @@ class ProfilesController < ApplicationController
   end
 
   def pparams
-    params.require(:profile).permit(:full_name, :amount_bracket)
+    params.require(:profile).permit(:full_name, :amount_bracket, :cause)
   end
 end
