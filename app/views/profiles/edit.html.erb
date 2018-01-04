@@ -1,1 +1,5 @@
-<%= render 'form_person' %>
+<% if (@profile.cause != nil) %>
+  <%= render 'form_person' %>
+<% elsif (@profile.amount_bracket != nil) %>
+  <%= render 'form_causes' %>
+<% end %>
