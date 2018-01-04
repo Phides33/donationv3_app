@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@import 'components/index';
+@import "config/colors";
 
-@import 'config/colors';
+@import "components/index";
