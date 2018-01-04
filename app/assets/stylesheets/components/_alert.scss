@@ -1,0 +1,20 @@
+/* -------------------------------------
+ * Your CSS code for flash notices and alerts
+* ------------------------------------- */
+
+.alert {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+.alert-info {
+  background: $green;
+}
+.alert-warning {
+  background: $red;
+}
+
+// Ne pas afficher les messages d'erreur de simple form
+.help-block {
+  display: none;
+}
