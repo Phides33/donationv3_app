@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180104100343) do
   enable_extension "plpgsql"
 
   create_table "profiles", force: :cascade do |t|
-    t.string  "last_name"
+    t.string  "full_name"
     t.integer "amount_bracket"
   end
 
