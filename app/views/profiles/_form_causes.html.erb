@@ -1,6 +1,0 @@
-<%= simple_form_for @profile do |d| %>
-  <%= d.input :cause,
-        label: "A quelle cause donneriez-vous (plus) si vous le pouviez ?",
-        collection: Profile.causes, as: :radio_buttons %>
-  <%= d.button :submit, "Confirmer et passer à la question suivante" %>
-<% end %>
