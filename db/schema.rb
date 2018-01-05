@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180105092846) do
+ActiveRecord::Schema.define(version: 20180105102611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20180105092846) do
     t.integer "cause"
     t.integer "step"
     t.integer "own_emotion"
+    t.integer "other_emotion"
+    t.integer "preferred_mean"
+    t.string  "money_wish"
+    t.integer "age_bracket"
+    t.string  "po_code"
+    t.integer "main_mobility_mode"
+    t.boolean "motor_vehicle_owner"
+    t.string  "mobile_number"
+    t.string  "email"
   end
 
 end

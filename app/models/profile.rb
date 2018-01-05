@@ -8,13 +8,13 @@ class Profile < ApplicationRecord
               "Pays en développement", "Droits de l'homme", "Patrimoine-culture",
               "Ordres religieux", "Sport"]
   enum own_emotion: ["fierté", "bonheur", "plénitude", "joie"]
-  # enum other_emotion: ["admiration", "respect", "amour", "tendresse",
-  #             "reconnaissance"]
-  # enum preferred_mean: ["gagner plus", "travailler plus", "économiser plus",
-  #             "payer moins cher"]
-  # enum age_bracket: ["18-25", "26-35", "36-45", "46-55", "56-65", "66 et plus"]
-  # enum main_mobility_mode: ["voiture", "moto", "scooter", "vélo", "fourgon",
-  #             "camion", "transports en commun"]
+  enum other_emotion: ["admiration", "respect", "amour", "tendresse",
+              "reconnaissance"]
+  enum preferred_mean: ["gagner plus", "travailler plus", "économiser plus",
+              "payer moins cher"]
+  enum age_bracket: ["18-25", "26-35", "36-45", "46-55", "56-65", "66 et plus"]
+  enum main_mobility_mode: ["voiture", "moto", "scooter", "vélo", "fourgon",
+              "camion", "transports en commun"]
 
   # Validations de format
   # validates_format_of :po_code, :with => /\A[0-9]{5}\Z/, message: "Un code postal comporte 5 chiffres"
