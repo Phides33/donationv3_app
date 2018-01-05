@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180105083852) do
+ActiveRecord::Schema.define(version: 20180105092846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180105083852) do
     t.integer "amount_bracket"
     t.integer "cause"
     t.integer "step"
+    t.integer "own_emotion"
   end
 
 end
