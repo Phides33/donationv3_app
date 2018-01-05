@@ -7,6 +7,13 @@
   <% end %>
 <% when 2 %>
   <%= simple_form_for @profile do |d| %>
+    <%= d.input :own_emotion,
+          label: "Que ressentiriez-vous en donnant plus ?",
+          collection: Profile.own_emotions, as: :radio_buttons %>
+    <%= d.button :submit, "Confirmer et passer à la question suivante" %>
+  <% end %>
+<% when 3 %>
+  <%= simple_form_for @profile do |d| %>
     <%= d.input :full_name, label: "Comment vous appelez-vous ?" %>
     <%= d.button :submit, "Confirmer et terminer" %>
   <% end %>

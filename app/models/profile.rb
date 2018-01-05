@@ -7,7 +7,7 @@ class Profile < ApplicationRecord
               "Protection de l'environnement", "Situations d'urgence", "Education", "Protection des animaux",
               "Pays en développement", "Droits de l'homme", "Patrimoine-culture",
               "Ordres religieux", "Sport"]
-  # enum own_emotion: ["fierté", "bonheur", "plénitude", "joie"]
+  enum own_emotion: ["fierté", "bonheur", "plénitude", "joie"]
   # enum other_emotion: ["admiration", "respect", "amour", "tendresse",
   #             "reconnaissance"]
   # enum preferred_mean: ["gagner plus", "travailler plus", "économiser plus",
