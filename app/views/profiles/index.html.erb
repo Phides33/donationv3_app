@@ -1,1 +1,26 @@
-<h1>Merci <%= @profile.full_name.match(/^(\w+)/) %> pour votre patience et votre intérêt!`</h1>
+<h1>Bienvenue!</h1>
+<!-- explication du reason why -->
+<div class="container">
+  <p>Je m'appelle Philippe. Depuis 25 ans j'optimise.</p>
+  <p>Tout le monde vous le dira autour de moi: Philippe est très efficace.</p>
+  <p>Ce qui m'anime chaque jour: comment faire mieux, voire beaucoup mieux, avec les
+ressources existantes.</p>
+  <p>Je l'ai beaucoup fait pour des entreprises, qui ont pu ainsi se développer, former,
+recruter, investir.</p>
+<!-- soutien des associations -->
+  <p>J'ai imaginé de vous faire économiser de l'argent tous les ans afin que vous ayez la
+possibilité de donner cette économie aux causes qui vous tiennent à coeur !</p>
+
+<!-- bouton démarrer le questionnaire -->
+  <h3>Vous faites partie des donateurs des Restos du Coeur, qui souhaitent valider votre intérêt
+pour ma démarche, vous adressent donc ce questionnaire et vous remercient de consacrer quelques minutes pour
+le remplir*.</h3>
+
+
+  <%= link_to new_profile_path do %>
+    <button class="btn btn-primary start">Démarrer le questionnaire</button>
+  <% end %>
+
+  <h5>* Vous pourrez bien entendu exercer votre droit d'accès, modification, suppression aux
+données vous concernant par simple mail à rgpd@...</h5>
+</div>
