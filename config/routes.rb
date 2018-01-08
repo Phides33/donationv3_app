@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'profiles#new'
-
-  resources :profiles, only: [:index, :new, :create, :edit, :update]
+  root 'profiles#index'
+  
+  resources :profiles, only: [:index, :show, :new, :create, :edit, :update]
 
 end

@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :prof_find, only: [:edit, :update]
 
-  def index
+  def show
     @profile = Profile.last
   end
 
@@ -69,7 +69,7 @@ class ProfilesController < ApplicationController
       if !!(pparams[:email] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/)
         @profile.email = pparams[:email]
         @profile.save
-        redirect_to profiles_path(@profile)
+        redirect_to profile_path(@profile)
       else
         flash.now[:alert] = "Votre réponse doit être un email valide"
         render :edit
