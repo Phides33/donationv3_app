@@ -1,1 +1,15 @@
-<h1>Merci <%= @profile.full_name.match(/^(\S+)/) %> pour votre patience et votre intérêt!</h1>
+<% if (@profile.age_bracket == "18-25" || @profile.age_bracket == "26-35") %>
+  <h1>Merci <%= @profile.full_name.match(/^(\S+)/) %> pour ta patience et ton intérêt!</h1>
+  <h2>Ensemble il doit être possible de multiplier par 5 les dons de chacun aux associations,</h2>
+  <h2>grâce à des économies générées sur la mobilité.</h2>
+  <h2>Imagine comment le monde changerait !</h2>
+  <h2><strong>Alors partage le mail que tu as reçu avec tes amis.</strong></h2>
+  <h2>Action contre la faim compte sur toi !</h2>
+<% else %>
+  <h1>Merci <%= @profile.full_name.match(/^(\S+)/) %> pour votre patience et votre intérêt!</h1>
+  <h2>Ensemble il doit être possible de multiplier par 5 les dons de chacun aux associations,</h2>
+  <h2>grâce à des économies générées sur la mobilité.</h2>
+  <h2>Imaginez comment le monde changerait !</h2>
+  <h2><strong>Alors partagez le mail que vous avez reçu avec vos amis.</strong></h2>
+  <h2>Action contre la faim compte sur vous !</h2>
+<% end %>
