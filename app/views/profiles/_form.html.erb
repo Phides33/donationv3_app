@@ -30,7 +30,9 @@
   <%= simple_form_for @profile do |d| %>
     <%= d.label "Si nous vous faisions économiser plusieurs centaines d'euros par an,
      vous en feriez quoi ?" %>
-    <%= d.input_field :money_wish, input_html: { maxlength: 200 } %>
+    <p></p>
+    <%= d.input_field :money_wish, style: "width: 70%;", input_html: { maxlength: 200 } %>
+    <p></p>
     <%= d.button :submit, "Confirmer et passer à la question suivante" %>
   <% end %>
 <% when 6 %>
